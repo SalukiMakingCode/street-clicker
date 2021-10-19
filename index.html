@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://salukimakingcode.github.io/pack/pack.css" rel="stylesheet" />
+    <script src="https://salukimakingcode.github.io/pack/pack.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="description" content="The clicker game in street fighter mood" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Street Fighter Clicker</title>
+</head>
+
+<body>
+
+<header>
+    <img src="assets/img/R.png" alt="logo rouge" class="mainLogo">
+    <h1>Clicker</h1>
+    <p>Score : <span id="score">0</span> pts</p>
+</header>
+
+<main>
+    <article id="card1" class="card">
+        <section class="buy" id="buy1">
+            <h2>Buy a new character</h2>
+            <h3>Cost : 0 point</h3>
+            <button class="buttonBuy" id="perso1">Buy</button>
+        </section>
+        <section class="leftCard" id="left1">
+            <img src="./assets/img/perso1Button1.png" alt="button 1" id="button1" class="button" data-state="1" />
+            <div id="autoclick1" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right1">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name1"></span></h2>
+                <h2 class="level">Level : <span id="level1"></span></h2>
+                <h2 class="speed">Speed : <span id="speed1"></span></h2>
+                <h2 class="levelup" id="levelup1">Level Up (<span id="costLevelUp1"></span>)</h2>
+                <h2 class="specialMove" id="timer1">Special move <span id="specialMove1" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter1" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card2" class="card">
+        <section class="mystery" id="mystery2">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy2">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso2cost"></span> points</h3>
+            <button class="buttonBuy" id="perso2">Buy</button>
+        </section>
+        <section class="leftCard" id="left2">
+            <img src="./assets/img/perso2Button1.png" alt="button 2" id="button2" class="button" data-state="1" />
+            <div id="autoclick2" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right2">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name2"></span></h2>
+                <h2 class="level">Level : <span id="level2"></span></h2>
+                <h2 class="speed">Speed : <span id="speed2"></span></h2>
+                <h2 class="levelup" id="levelup2">Level Up (<span id="costLevelUp2"></span>)</h2>
+                <h2 class="specialMove" id="timer2">Special move <span id="specialMove2" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter2" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card3" class="card">
+        <section class="mystery" id="mystery3">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy3">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso3cost"></span> points</h3>
+            <button class="buttonBuy" id="perso3">Buy</button>
+        </section>
+        <section class="leftCard" id="left3">
+            <img src="./assets/img/perso3Button1.png" alt="button 3" id="button3" class="button" data-state="1" />
+            <div id="autoclick3" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right3">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name3"></span></h2>
+                <h2 class="level">Level : <span id="level3"></span></h2>
+                <h2 class="speed">Speed : <span id="speed3"></span></h2>
+                <h2 class="levelup" id="levelup3">Level Up (<span id="costLevelUp3"></span>)</h2>
+                <h2 class="specialMove" id="timer3">Special move <span id="specialMove3" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter3" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card4" class="card">
+        <section class="mystery" id="mystery4">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy4">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso4cost"></span> points</h3>
+            <button class="buttonBuy" id="perso4">Buy</button>
+        </section>
+        <section class="leftCard" id="left4">
+            <img src="./assets/img/perso4Button1.png" alt="button 4" id="button4" class="button" data-state="1" />
+            <div id="autoclick4" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right4">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name4"></span></h2>
+                <h2 class="level">Level : <span id="level4"></span></h2>
+                <h2 class="speed">Speed : <span id="speed4"></span></h2>
+                <h2 class="levelup" id="levelup4">Level Up (<span id="costLevelUp4"></span>)</h2>
+                <h2 class="specialMove" id="timer4">Special move <span id="specialMove4" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter4" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card5" class="card">
+        <section class="mystery" id="mystery5">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy5">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso5cost"></span> points</h3>
+            <button class="buttonBuy" id="perso5">Buy</button>
+        </section>
+        <section class="leftCard" id="left5">
+            <img src="./assets/img/perso5Button1.png" alt="button 5" id="button5" class="button" data-state="1" />
+            <div id="autoclick5" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right5">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name5"></span></h2>
+                <h2 class="level">Level : <span id="level5"></span></h2>
+                <h2 class="speed">Speed : <span id="speed5"></span></h2>
+                <h2 class="levelup" id="levelup5">Level Up (<span id="costLevelUp5"></span>)</h2>
+                <h2 class="specialMove" id="timer5">Special move <span id="specialMove5" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter5" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card6" class="card">
+        <section class="mystery" id="mystery6">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy6">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso6cost"></span> points</h3>
+            <button class="buttonBuy" id="perso6">Buy</button>
+        </section>
+        <section class="leftCard" id="left6">
+            <img src="./assets/img/perso6Button1.png" alt="button 6" id="button6" class="button" data-state="1" />
+            <div id="autoclick6" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right6">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name6"></span></h2>
+                <h2 class="level">Level : <span id="level6"></span></h2>
+                <h2 class="speed">Speed : <span id="speed6"></span></h2>
+                <h2 class="levelup" id="levelup6">Level Up (<span id="costLevelUp6"></span>)</h2>
+                <h2 class="specialMove" id="timer6">Special move <span id="specialMove6" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter6" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card7" class="card">
+        <section class="mystery" id="mystery7">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy7">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso7cost"></span> points</h3>
+            <button class="buttonBuy" id="perso7">Buy</button>
+        </section>
+        <section class="leftCard" id="left7">
+            <img src="./assets/img/perso7Button1.png" alt="button 7" id="button7" class="button" data-state="1" />
+            <div id="autoclick7" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right7">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name7"></span></h2>
+                <h2 class="level">Level : <span id="level7"></span></h2>
+                <h2 class="speed">Speed : <span id="speed7"></span></h2>
+                <h2 class="levelup" id="levelup7">Level Up (<span id="costLevelUp7"></span>)</h2>
+                <h2 class="specialMove" id="timer7">Special move <span id="specialMove7" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter7" data-img="" />
+            </div>
+        </section>
+    </article>
+
+    <article id="card8" class="card">
+        <section class="mystery" id="mystery8">
+            <h2><span class="mysteryText">&nbsp;?&nbsp;</span></h2>
+        </section>
+        <section class="buy" id="buy8">
+            <h2>Buy a new character</h2>
+            <h3>Cost : <span id="perso8cost"></span> points</h3>
+            <button class="buttonBuy" id="perso8">Buy</button>
+        </section>
+        <section class="leftCard" id="left8">
+            <img src="./assets/img/perso8Button1.png" alt="button 8" id="button8" class="button" data-state="1" />
+            <div id="autoclick8" class="autoclick" data-activate="0"></div>
+        </section>
+        <section class="rightCard" id="right8">
+            <div class="rightCardLeft">
+                <h2 class="name">Name : <span id="name8"></span></h2>
+                <h2 class="level">Level : <span id="level8"></span></h2>
+                <h2 class="speed">Speed : <span id="speed8"></span></h2>
+                <h2 class="levelup" id="levelup8">Level Up (<span id="costLevelUp8"></span>)</h2>
+                <h2 class="specialMove" id="timer8">Special move <span id="specialMove8" data-state="1">(1)</span>
+            </div>
+            <div class="rightCardRight">
+                <img src="" alt="perso" id="imgCharacter8" data-img="" />
+            </div>
+        </section>
+    </article>
+
+</main>
+
+<footer>
+    <img src="./assets/img/background1.png" alt="background" id="background1" />
+    <img src="./assets/img/car1.png" alt="car" id="car1" />
+    <img src="./assets/img/car2.png" alt="car" id="car2" />
+    <img src="./assets/img/car3.png" alt="car" id="car3" />
+    <img src="./assets/img/car4.png" alt="car" id="car4" />
+    <img src="./assets/img/car5.png" alt="car" id="car5" />
+    <img src="./assets/img/car6.png" alt="car" id="car6" />
+    <img src="./assets/img/car7.png" alt="car" id="car7" />
+    <img src="./assets/img/car8.png" alt="car" id="car8" />
+    <img src="./assets/img/car9.png" alt="car" id="car9" />
+    <img src="./assets/img/car10.png" alt="car" id="car10" />
+    <img src="./assets/img/oil1.png" alt="car" id="oil1" />
+    <img src="./assets/img/oil2.png" alt="car" id="oil2" />
+    <img src="./assets/img/oil3.png" alt="car" id="oil3" />
+    <img src="./assets/img/water1.png" alt="car" id="water1" />
+    <img src="./assets/img/water2.png" alt="car" id="water2" />
+    <img src="./assets/img/water3.png" alt="car" id="water3" />
+    <img src="./assets/img/wheel.png" alt="car" id="wheel1" />
+    <img src="./assets/img/wheel.png" alt="car" id="wheel2" />
+    <img src="./assets/img/carBreak1.png" alt="car" id="carBreak1" />
+    <img src="./assets/img/carBreak2.png" alt="car" id="carBreak2" />
+    <img src="./assets/img/door.png" alt="car" id="door" />
+    <img src="./assets/img/eclatVerre1.png" alt="car" id="eclatVerre1" />
+    <img src="./assets/img/eclatVerre2.png" alt="car" id="eclatVerre2" />
+    <canvas id="game" width="880" height="190">
+        Votre navigateur ne supporte pas Canvas :(
+    </canvas>
+</footer>
+
+
+
+<div id="modal">
+    <div id="modal-content">
+        <div id="modal-title"></div>
+        <img id="modal-pers" src="" />
+        <div id="modal-close">
+            <span id="modalClose"> OK </span>
+        </div>
+    </div>
+</div>
+<script src="./assets/js/clicker.js"></script>
+</body>
+
+</html>

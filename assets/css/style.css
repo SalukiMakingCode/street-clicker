@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  background-color: #2a2a2a;
+  font-family: "Bebas Neue", cursive;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 3.3rem;
+  line-height: 3.3rem;
+  height: 3.8rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+body header img {
+  width: 10rem;
+  height: auto;
+  position: relative;
+}
+body header h1 {
+  text-align: center;
+  text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;
+  color: white;
+  font-size: 6rem;
+  font-weight: bolder;
+  width: 22rem;
+  padding-bottom: 1rem;
+}
+body header p {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000, -2px 0px 0 #000000, 0px -2px 0 #000000;
+  color: #FFA900;
+  background-color: #FF1902;
+  font-weight: bolder;
+  width: 40rem;
+}
+body main {
+  padding-top: 4rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body main .card {
+  border: 2px solid white;
+  display: flex;
+  flex-flow: row wrap;
+  width: 20rem;
+  height: 9rem;
+  margin-bottom: 1.5rem;
+}
+body main .card .mystery {
+  width: 100%;
+  text-align: center;
+}
+body main .card .mystery h2 {
+  margin-top: 2.5rem;
+}
+body main .card .mystery h2 .mysteryText {
+  font-size: 3rem;
+  color: #2a2a2a;
+  background-color: white;
+  height: 2.5rem;
+  font-weight: bolder;
+  border-radius: 50%;
+}
+body main .card .buy {
+  display: none;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+body main .card .buy h2 {
+  padding-top: 1rem;
+}
+body main .card .buy h3 {
+  padding-top: 0.6rem;
+}
+body main .card .buy button {
+  background-color: #2a2a2a;
+  border: 2px solid white;
+  margin-top: 0.6rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "Bebas Neue", cursive;
+  color: white;
+}
+body main .card .buy button:hover {
+  background-color: #FF1902A0;
+  text-decoration: none;
+  color: white;
+}
+body main .card .leftCard {
+  display: none;
+  width: 6rem;
+  background-color: #FF1902A0;
+  height: 9rem;
+}
+body main .card .leftCard img {
+  width: 100%;
+  cursor: pointer;
+}
+body main .card .leftCard .autoclick {
+  text-align: center;
+  background-color: #FFA900;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: -0.3rem;
+}
+body main .card .rightCard {
+  width: 14rem;
+  display: none;
+  color: white;
+  background-color: none;
+}
+body main .card .rightCard .rightCardLeft {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  width: 7rem;
+  font-size: 0.8rem;
+}
+body main .card .rightCard .rightCardLeft .levelup {
+  cursor: pointer;
+}
+body main .card .rightCard .rightCardLeft .specialMove {
+  background-color: #FFA900;
+  margin-top: 1rem;
+  text-align: center;
+  padding-top: 2px;
+  padding-left: 0.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+body main .card .rightCard .rightCardLeft .specialMove:hover {
+  background-color: #FF1902A0;
+}
+body main .card .rightCard .rightCardRight {
+  width: 7rem;
+}
+body footer {
+  margin-top: -0.5rem;
+  display: flex;
+  justify-content: center;
+}
+body footer img {
+  display: none;
+}
+body #modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+body #modal #modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2a2a;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid white;
+  width: 80%;
+  height: 20rem;
+}
+body #modal #modal-content #modal-title {
+  padding-top: 3rem;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  justify-content: space-around;
+}
+body #modal #modal-content #modal-close {
+  color: white;
+  border: 1px solid white;
+  margin-top: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+body #modal #modal-content #modal-close #modalClose {
+  display: flex;
+  cursor: pointer;
+}
+body #modal #modal-content #modal-close:hover {
+  background-color: #FF1902A0;
+}
+
+/*# sourceMappingURL=style.css.map */
