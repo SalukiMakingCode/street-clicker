@@ -1,7 +1,7 @@
 (() => {
 document.getElementById("buy1").style.display="block";
 // god mode
-document.getElementById("score").innerText="1000000000";
+//document.getElementById("score").innerText="1000000000";
 
 let perso1speed=1;
 let perso2speed=Math.ceil(Math.exp(2));
