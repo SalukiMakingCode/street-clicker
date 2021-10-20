@@ -126,8 +126,8 @@ function pressButton(id) {
     // buy special moves
     function buySp(id) {
         let numId = id.substring(5, 6)
-        document.getElementById("specialMove" + numId).dataset.state = Number(document.getElementById("specialMove" + numId).dataset.state) - 1;
-        document.getElementById("specialMove" + numId).textContent = " (" + document.getElementById("specialMove" + numId).dataset.state + ") "
+        document.getElementById("specialMove" + numId).dataset.state = (Number(document.getElementById("specialMove" + numId).dataset.state) - 1).toString(10);
+        document.getElementById("specialMove" + numId).textContent = " (" + document.getElementById("specialMove" + numId).dataset.state + ") ";
         if (Number(document.getElementById("specialMove" + numId).dataset.state) < 1) {
             document.getElementById("timer" + numId).style.display = "none";
         }
@@ -164,7 +164,7 @@ function pressButton(id) {
         if (i === 1) { document.getElementById("imgCharacter" + id).src = "./assets/img/SP/" + eval("perso" + id + "Name") + i + ".png" }
         i--;
         if (i >= 1) {
-            setTimeout(function () { specialMove(i, id) }, 30);
+            setTimeout(function () { specialMove(i, id) }, 50);
         }
         else {
             document.getElementById("button" + id).src = "./assets/img/perso" + id + "Button1.png";
@@ -254,7 +254,11 @@ function modalNewPerso(id){
     document.getElementById("modal-title").innerHTML = "Congratulations!<br/> You have enough points to get " + perso;
      animPerso(id,limitVictory, 1)
     if (modal !== null){
-        document.getElementById("modalClose").addEventListener("click", () => { modal.style.display = "none"; loadBonus();
+        document.getElementById("modalClose").addEventListener("click", () => {
+            modal.style.display = "none";
+            loadBonus();
+            document.getElementById("specialMove" + id).dataset.state = "1";
+            document.getElementById("specialMove" + id).textContent = " (" + document.getElementById("specialMove" + id).dataset.state + ") ";
         });
     }
 }
