@@ -135,12 +135,11 @@ function pressButton(id) {
 
     // activate special moves
     function clickMove(id) {
-
         let numId = id.substring(5, 6);
         let i = 9;
         document.getElementById("button" + numId).src = "./assets/img/perso" + numId + "Button4.png";
         document.getElementById("button" + numId).dataset.state = "4";
-        document.getElementById("score").innerText = (Number(document.getElementById("score").innerText) + Number(document.getElementById("speed" + numId).textContent) * 100).toString(10);
+        document.getElementById("score").innerText = (Number(document.getElementById("score").innerText) + (Number(document.getElementById("speed" + numId).textContent) * 80)).toString(10);
         if (numId === "1") { i = 5; }
         if (numId === "2") { i = 9; }
         if (numId === "3") { i = 8; }
@@ -149,9 +148,7 @@ function pressButton(id) {
         if (numId === "6") { i = 6; }
         if (numId === "7") { i = 6; }
         if (numId === "8") { i = 8; }
-
         specialMove(i, numId)
-
     }
 
     // Special move + countdown
@@ -223,54 +220,52 @@ function buyAutoclick(id) {
         }
     }
 
-    // modal congratz for new perso
-    function modalNewPerso(id){
-        let modal = document.getElementById("modal");
-        modal.style.display="block";
-        let perso = eval("perso" + id + "Name");
-        switch (perso){
-            case "bison" :
-                limitVictory = 2;
-                break;
-            case "blanka":
-                limitVictory = 5;
-                break;
-            case "cammy":
-                limitVictory = 5;
-                break;
-            case "chun-li":
-                limitVictory = 13;
-                break;
-            case "honda" :
-                limitVictory = 2;
-                break;
-            case "ken" :
-                limitVictory = 3;
-                break;
-            case "ryu":
-                limitVictory = 7;
-                break;
-            case "zanglief":
-                limitVictory = 2;
-                break;
-        }
-        document.getElementById("modal-title").innerHTML = "Congratulations!<br/> You have enough points to get " + perso;
-
-        animPerso(id,limitVictory, 1)
-        if (modal !== null){
-            document.getElementById("modalClose").addEventListener("click", () => { modal.style.display = "none"; loadBonus();
-            });
-        }
+// modal congratz for new perso
+function modalNewPerso(id){
+    let modal = document.getElementById("modal");
+    modal.style.display="block";
+    let perso = eval("perso" + id + "Name");
+    switch (perso){
+        case "bison" :
+            limitVictory = 2;
+            break;
+        case "blanka":
+            limitVictory = 5;
+            break;
+        case "cammy":
+            limitVictory = 5;
+            break;
+        case "chun-li":
+            limitVictory = 13;
+            break;
+        case "honda" :
+            limitVictory = 2;
+            break;
+        case "ken" :
+            limitVictory = 3;
+            break;
+        case "ryu":
+            limitVictory = 7;
+            break;
+        case "zanglief":
+            limitVictory = 2;
+            break;
     }
-    // anim perso in modal
-    function animPerso(id, limitVictory, i){
-        let perso = eval("perso" + id + "Name");
-        let imgVictory =  "./assets/img/victories/" + perso + "/" + perso + "-" + i + ".png";
-        document.getElementById("modal-pers").src = imgVictory;
-        i++;
-        if (i <= limitVictory ) setTimeout( function(){ animPerso(id, limitVictory, i) }, 150);
-
+    document.getElementById("modal-title").innerHTML = "Congratulations!<br/> You have enough points to get " + perso;
+     animPerso(id,limitVictory, 1)
+    if (modal !== null){
+        document.getElementById("modalClose").addEventListener("click", () => { modal.style.display = "none"; loadBonus();
+        });
     }
+}
+// anim perso in modal
+function animPerso(id, limitVictory, i){
+    let perso = eval("perso" + id + "Name");
+    let imgVictory =  "./assets/img/victories/" + perso + "/" + perso + "-" + i + ".png";
+    document.getElementById("modal-pers").src = imgVictory;
+    i++;
+    if (i <= limitVictory ) setTimeout( function(){ animPerso(id, limitVictory, i) }, 150);
+ }
 
 
 // activate autoclick
@@ -889,7 +884,6 @@ element.addEventListener('click', () => {
         for (let i=1; i<9; i++) {
             if (document.getElementById("speed"+i).textContent!==undefined) ptsBonus=ptsBonus+Number(document.getElementById("speed"+i).textContent);
         }
-        ptsBonus=ptsBonus+Math.ceil((ptsBonus/100)*20);
     }
 
 })();
